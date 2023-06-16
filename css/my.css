@@ -17,6 +17,7 @@ html {
 }
 body {
     font-family: 'Cairo', sans-serif;
+    margin: 0;
 }
 a {
     text-decoration: none;
@@ -118,6 +119,11 @@ ul {
 .dots-down {
     bottom: 200px;
     left: 0;
+}
+@media (max-width:767px) {
+    .dots {
+        display:none;
+    }
 }
 /* start header */
 .header {
@@ -683,7 +689,7 @@ ul {
     align-items: center;
     gap: 20px;
 }
-.team .box .data .social a:hover {
+.team .box .data .social a:hover i {
     color: var(--main-color);
 }
 .team .box .data .social i {
@@ -951,6 +957,8 @@ ul {
     text-align: center;
     width: 75px;
     transition: var(--main-transition);
+    z-index: 0;
+    background-color: white;
 }
 .events .info .time .unit span {
     display: block;
@@ -995,6 +1003,8 @@ ul {
     border-radius: 50px;
     display: flex;
     gap: 20px;
+    z-index: 1;
+    position: relative;
 }
 @media (max-width:767px) {
     .events .subscribe form {
@@ -1116,8 +1126,8 @@ ul {
     bottom: 0;
     right: 0;
     border-style: solid;
-    background-color: transparent transparent white;
-    border-width: 20ppx;
+    border-color: transparent transparent white;
+    border-width: 20px;
 }
 .pricing .box .title {
     font-weight: bold;
@@ -1144,6 +1154,11 @@ ul {
 }
 .pricing .box ul {
     text-align: left;
+}
+@media (max-width:767px) {
+    .pricing .box ul {
+        text-align: center;
+    }
 }
 .pricing .box ul li {
     padding: 20px;
@@ -1264,7 +1279,7 @@ ul {
     padding: 30px 15px;
     text-align: center;
     position: relative;
-    opacity: .8;
+    opacity: 0.8;
     transition: var(--main-transition);
 }
 .stats .box::before,
@@ -1343,6 +1358,7 @@ ul {
     align-items: center;
     justify-content: center;
     flex-basis: 50%;
+    padding-bottom: 50px;
 }
 @media (max-width:991px) {
     .discount .form {
